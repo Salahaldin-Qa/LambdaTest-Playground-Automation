@@ -1,68 +1,52 @@
 package test;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
-import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import pages.CartPage;
 
-public class CartTests {
+public class CartTests extends BaseTest {
 
-    private WebDriver driver;
     private CartPage cartPage;
-    private final String BASE_URL = "https://ecommerce-playground.lambdatest.io/index.php?route=common/home";
 
     @BeforeMethod
-    public void setUp() {
-        driver = new ChromeDriver();
-        driver.manage().window().maximize();
-        driver.get(BASE_URL);
+    public void init() {
         cartPage = new CartPage(driver);
     }
 
-    @Test(priority = 1)
-    public void testQuickAddToCartViaHover_TC007() {
-        cartPage.hoverAndClickQuickAddToCart();
+    @DataProvider(name = "cartActions")
+    public Object[][] cartData() {
+        return new Object[][] {
+            { "ADD", "" },
+            { "REMOVE", "" },
+            { "UPDATE", "3" }
+        };
+    }
+
+    @Test(dataProvider = "cartActions", priority = 1)
+    public void testCartOperations(String action, String qty) {
+
+    	cartPage.hoverAndClickQuickAddToCart();
         cartPage.navigateToCartPage();
-        Assert.assertNotNull(driver.getTitle(), "Error: Page crashed after quick add to cart.");
+        
+        if (action.equals("ADD")) {
+            Assert.assertNotNull(driver.getTitle(), "Cart page crashed after adding item");
+            
+        } else if (action.equals("REMOVE")) {
+            cartPage.removeProduct();
+            String msg = cartPage.getEmptyCartMessage().toLowerCase();
+            Assert.assertTrue(msg.contains("empty") || msg.contains("فارغة"), "Empty cart message not shown");
+            
+        } else if (action.equals("UPDATE")) {
+            cartPage.updateQuantity(qty);
+            Assert.assertNotNull(driver.getTitle(), "Page broke after quantity update");
+        }
     }
 
     @Test(priority = 2)
-    public void testQuickBuyNowButton_TC008() {
+    public void testQuickBuyNow_TC008() {
         boolean isBuyAvailable = cartPage.isQuickBuyNowAvailable();
-        System.out.println("TC008 - Quick Buy Now Active: " + isBuyAvailable);
-        
-        Assert.assertFalse(isBuyAvailable, "Error: Quick Buy Now is bypassable under zero stock options!");
-    }
-
-    @Test(priority = 3)
-    public void testRemoveProductFromQuickCart_TC009() {
-        cartPage.hoverAndClickQuickAddToCart();
-        cartPage.navigateToCartPage();
-        
-        cartPage.removeProduct();
-        
-        String actualMsg = cartPage.getEmptyCartMessage().toLowerCase();
-        Assert.assertTrue(actualMsg.contains("empty") || actualMsg.contains("فارغة") || actualMsg.contains("00"), 
-                "Error: Cart clear message did not appear.");
-    }
-
-    @Test(priority = 4)
-    public void testEditQuantityFromQuickCart_TC010() {
-        cartPage.hoverAndClickQuickAddToCart();
-        cartPage.navigateToCartPage();
-        
-        cartPage.updateQuantity("3");
-        
-        Assert.assertNotNull(driver.getTitle(), "Error: Page broke after updating quantity.");
-    }
-
-    @AfterMethod
-    public void tearDown() {
-        if (driver != null) {
-            driver.quit();
-        }
+        Assert.assertFalse(isBuyAvailable, "Quick Buy Now should be disabled for zero stock!");
     }
 }
