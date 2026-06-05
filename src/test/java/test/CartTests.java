@@ -36,7 +36,7 @@ public class CartTests extends BaseTest {
         } else if (action.equals("REMOVE")) {
             cartPage.removeProduct();
             String msg = cartPage.getEmptyCartMessage().toLowerCase();
-            Assert.assertTrue(msg.contains("empty") || msg.contains("فارغة"), "Empty cart message not shown");
+            Assert.assertTrue(msg.contains("empty") || msg.contains("Your shopping cart is empty!"), "Empty cart message not shown");
             
         } else if (action.equals("UPDATE")) {
             cartPage.updateQuantity(qty);
