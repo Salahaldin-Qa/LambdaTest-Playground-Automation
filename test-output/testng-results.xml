@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="10" passed="10" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٢:٥١ IDT" name="LambdaTest Playground Suite" finished-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٤:٣٧ IDT" duration-ms="105869">
+    <groups>
+    </groups>
+    <test started-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٢:٥١ IDT" name="Search Functional Tests" finished-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٤:٠٢ IDT" duration-ms="71244">
+      <class name="test.SearchTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.SearchTests@6c6cb480]" started-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٢:٥١ IDT" name="setUp" finished-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٢:٥٦ IDT" duration-ms="5263" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testValidProductSearch_TC001()[pri:1, instance:test.SearchTests@6c6cb480]" started-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٢:٥٦ IDT" name="testValidProductSearch_TC001" finished-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٢:٥٩ IDT" duration-ms="2730" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidProductSearch_TC001 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.SearchTests@6c6cb480]" started-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٢:٥٩ IDT" name="tearDown" finished-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٢:٥٩ IDT" duration-ms="283" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.SearchTests@6c6cb480]" started-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٢:٥٩ IDT" name="setUp" finished-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٣:٠٤ IDT" duration-ms="4289" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testNonExistentProductSearch_TC002()[pri:2, instance:test.SearchTests@6c6cb480]" started-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٣:٠٤ IDT" name="testNonExistentProductSearch_TC002" finished-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٣:١٠ IDT" duration-ms="5954" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNonExistentProductSearch_TC002 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.SearchTests@6c6cb480]" started-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٣:١٠ IDT" name="tearDown" finished-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٣:١٠ IDT" duration-ms="353" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.SearchTests@6c6cb480]" started-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٣:١٠ IDT" name="setUp" finished-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٣:١٤ IDT" duration-ms="3863" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testPartialKeywordSearch_TC003()[pri:3, instance:test.SearchTests@6c6cb480]" started-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٣:١٤ IDT" name="testPartialKeywordSearch_TC003" finished-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٣:١٦ IDT" duration-ms="1752" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPartialKeywordSearch_TC003 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.SearchTests@6c6cb480]" started-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٣:١٦ IDT" name="tearDown" finished-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٣:١٦ IDT" duration-ms="295" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.SearchTests@6c6cb480]" started-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٣:١٦ IDT" name="setUp" finished-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٣:١٩ IDT" duration-ms="3225" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testEmptySearch_TC004()[pri:4, instance:test.SearchTests@6c6cb480]" started-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٣:١٩ IDT" name="testEmptySearch_TC004" finished-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٣:٣٩ IDT" duration-ms="20335" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEmptySearch_TC004 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.SearchTests@6c6cb480]" started-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٣:٣٩ IDT" name="tearDown" finished-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٣:٤٠ IDT" duration-ms="507" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.SearchTests@6c6cb480]" started-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٣:٤٠ IDT" name="setUp" finished-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٣:٤٥ IDT" duration-ms="5257" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testLongCharacterSearch_TC005()[pri:5, instance:test.SearchTests@6c6cb480]" started-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٣:٤٥ IDT" name="testLongCharacterSearch_TC005" finished-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٣:٥١ IDT" duration-ms="6228" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLongCharacterSearch_TC005 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.SearchTests@6c6cb480]" started-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٣:٥١ IDT" name="tearDown" finished-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٣:٥٢ IDT" duration-ms="310" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.SearchTests@6c6cb480]" started-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٣:٥٢ IDT" name="setUp" finished-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٣:٥٧ IDT" duration-ms="4779" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testNumbersAndSymbolsSearch_TC006()[pri:6, instance:test.SearchTests@6c6cb480]" started-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٣:٥٧ IDT" name="testNumbersAndSymbolsSearch_TC006" finished-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٤:٠٢ IDT" duration-ms="5442" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNumbersAndSymbolsSearch_TC006 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.SearchTests@6c6cb480]" started-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٤:٠٢ IDT" name="tearDown" finished-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٤:٠٢ IDT" duration-ms="250" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- test.SearchTests -->
+    </test> <!-- Search Functional Tests -->
+    <test started-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٤:٠٢ IDT" name="Cart Tests" finished-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٤:٣٧ IDT" duration-ms="34556">
+      <class name="test.CartTests">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.CartTests@3c3d9b6b]" started-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٤:٠٢ IDT" name="setUp" finished-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٤:٠٧ IDT" duration-ms="4601" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testQuickAddToCartViaHover_TC007()[pri:1, instance:test.CartTests@3c3d9b6b]" started-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٤:٠٧ IDT" name="testQuickAddToCartViaHover_TC007" finished-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٤:١١ IDT" duration-ms="3737" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testQuickAddToCartViaHover_TC007 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.CartTests@3c3d9b6b]" started-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٤:١١ IDT" name="tearDown" finished-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٤:١١ IDT" duration-ms="236" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.CartTests@3c3d9b6b]" started-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٤:١١ IDT" name="setUp" finished-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٤:١٥ IDT" duration-ms="3731" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testQuickBuyNowButton_TC008()[pri:2, instance:test.CartTests@3c3d9b6b]" started-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٤:١٥ IDT" name="testQuickBuyNowButton_TC008" finished-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٤:١٥ IDT" duration-ms="286" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testQuickBuyNowButton_TC008 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.CartTests@3c3d9b6b]" started-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٤:١٥ IDT" name="tearDown" finished-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٤:١٥ IDT" duration-ms="276" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.CartTests@3c3d9b6b]" started-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٤:١٥ IDT" name="setUp" finished-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٤:١٧ IDT" duration-ms="2304" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testRemoveProductFromQuickCart_TC009()[pri:3, instance:test.CartTests@3c3d9b6b]" started-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٤:١٧ IDT" name="testRemoveProductFromQuickCart_TC009" finished-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٤:٢٦ IDT" duration-ms="8459" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testRemoveProductFromQuickCart_TC009 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.CartTests@3c3d9b6b]" started-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٤:٢٦ IDT" name="tearDown" finished-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٤:٢٦ IDT" duration-ms="306" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:test.CartTests@3c3d9b6b]" started-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٤:٢٦ IDT" name="setUp" finished-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٤:٢٩ IDT" duration-ms="2373" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testEditQuantityFromQuickCart_TC010()[pri:4, instance:test.CartTests@3c3d9b6b]" started-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٤:٢٩ IDT" name="testEditQuantityFromQuickCart_TC010" finished-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٤:٣٧ IDT" duration-ms="7911" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEditQuantityFromQuickCart_TC010 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:test.CartTests@3c3d9b6b]" started-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٤:٣٧ IDT" name="tearDown" finished-at="٢٠٢٦-٠٦-٠٥T٠٢:٢٤:٣٧ IDT" duration-ms="312" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- test.CartTests -->
+    </test> <!-- Cart Tests -->
+  </suite> <!-- LambdaTest Playground Suite -->
+</testng-results>
