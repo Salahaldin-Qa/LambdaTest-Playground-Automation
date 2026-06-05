@@ -1,79 +1,51 @@
 package test;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-
 import pages.SearchPage;
 
 public class SearchTests extends BaseTest {
 
     private SearchPage searchPage;
 
-    @Test(priority = 1)
-    public void testValidProductSearch_TC001() {
+    @BeforeMethod
+    public void init() {
         searchPage = new SearchPage(driver);
-        searchPage.performSearch("ipod touch");
+    }
+
+    @DataProvider(name = "searchQueries")
+    public Object[][] searchData() {
+        return new Object[][] {
+            { "ipod touch", true },
+            { "samsung", true },
+            { "invalid product", false },
+            { "x".repeat(251), false },
+            { "1234@", false }
+        };
+    }
+
+    @Test(dataProvider = "searchQueries", priority = 1)
+    public void testSearchFunctionality(String keyword, boolean shouldFind) {
+        searchPage.performSearch(keyword);
         
-        String actualResult = searchPage.getFirstResultText();
-        Assert.assertTrue(actualResult.toLowerCase().contains("ipod touch"), 
-                "Error: 'ipod touch' was not found.");
+        if (shouldFind) {
+            String resultText = searchPage.getFirstResultText().toLowerCase();
+            Assert.assertTrue(resultText.contains(keyword), "Search result mismatch for: " + keyword);
+        } else {
+            String errorMsg = searchPage.getNoResultsMessage().toLowerCase();
+            Assert.assertTrue(errorMsg.contains("no product") || errorMsg.contains("criteria"), 
+                    "Expected 'no results' message for: " + keyword);
+        }
     }
 
     @Test(priority = 2)
-    public void testNonExistentProductSearch_TC002() {
-        searchPage = new SearchPage(driver);
-        searchPage.performSearch("invalid product");
-        
-        String actualMessage = searchPage.getNoResultsMessage();
-        Assert.assertTrue(actualMessage.toLowerCase().contains("There is no product that matches the search criteria"
-
-) || actualMessage.toLowerCase().contains("search criteria"), 
-                "Error: 'No results found' message did not appear.");
-    }
-
-    @Test(priority = 3)
-    public void testPartialKeywordSearch_TC003() {
-        searchPage = new SearchPage(driver);
-        searchPage.performSearch("samsung");
-        
-        String actualResult = searchPage.getFirstResultText();
-        Assert.assertTrue(actualResult.toLowerCase().contains("samsung"), 
-                "Error: Results do not contain 'samsung'.");
-    }
-    @Test(priority = 4)
     public void testEmptySearch_TC004() {
-        searchPage = new pages.SearchPage(driver);
-        
         searchPage.enterSearchQuery("");
-        
         searchPage.clickSearchButton();
         
         String firstProduct = searchPage.getFirstResultText();
-        
-        Assert.assertFalse(firstProduct.isEmpty(), 
-                "Error: Page did not reload or display products upon empty search.");
-    }
-
-    @Test(priority = 5)
-    public void testLongCharacterSearch_TC005() {
-        searchPage = new SearchPage(driver);
-        
-        String longQuery = "x".repeat(251);
-        searchPage.performSearch(longQuery);
-        
-        String actualMessage = searchPage.getNoResultsMessage();
-        Assert.assertTrue(actualMessage.toLowerCase().contains("no product") || actualMessage.toLowerCase().contains("search criteria"), 
-                "Error: System failed to handle maximum limit safely.");
-    }
-
-    @Test(priority = 6)
-    public void testNumbersAndSymbolsSearch_TC006() {
-        searchPage = new SearchPage(driver);
-        
-        searchPage.performSearch("1234@");
-        
-        String actualMessage = searchPage.getNoResultsMessage();
-        Assert.assertTrue(actualMessage.toLowerCase().contains("no product") || actualMessage.toLowerCase().contains("search criteria"), 
-                "Error: Invalid symbols did not trigger validation message.");
+        Assert.assertFalse(firstProduct.isEmpty(), "Page didn't reload items on empty search");
     }
 }
