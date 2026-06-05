@@ -23,7 +23,7 @@ public class CartPage {
     private By quantityInput = By.xpath("//td[contains(@class,'text-left')]//input[contains(@name, 'quantity')] | //div[@class='input-group']//input");
     private By updateCartBtn = By.xpath("//button[@type='submit' and contains(@data-original-title, 'Update') or contains(@title, 'Update')]");
     private By removeProductBtn = By.xpath("//button[contains(@class, 'btn-danger')]");
-    private By emptyCartMsg = By.xpath("//div[@id='content']//p[contains(text(), 'empty') or contains(text(), 'فارغة') or contains(text(), '00')]");
+    private By emptyCartMsg = By.xpath("//div[@id='content']//p[contains(text(), 'empty') or contains(text(), 'empty') or contains(text(), '00')]");
 
     public CartPage(WebDriver driver) {
         this.driver = driver;
