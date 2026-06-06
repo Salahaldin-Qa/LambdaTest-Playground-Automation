@@ -123,7 +123,7 @@ Objective: Assert that the Quick Buy Now functionality is structurally disabled 
 Clone the repository:
 
 ## Bash
-   git clone [https://github.com/your-username/LambdaTest_Playground_Automation.git](https://github.com/Salahaldin-Qa/LambdaTest_Playground_Automation.git)
+   git clone [https://github.com/your-username/LambdaTest_Playground_Automation.git](https://github.com/Salahaldin-Qa/LambdaTest_Playground_Automation.git) 
    cd LambdaTest_Playground_Automation
 Install all project dependencies:
 
