@@ -13,34 +13,38 @@ public class CartTests extends BaseTest {
     @BeforeMethod
     public void init() {
         cartPage = new CartPage(driver);
+        cartPage.hoverAndClickQuickAddToCart();
+        cartPage.navigateToCartPage();
     }
 
-    @DataProvider(name = "cartActions")
-    public Object[][] cartData() {
+    @DataProvider(name = "cartOperationsProvider")
+    public Object[][] getCartTestData() {
         return new Object[][] {
             { "ADD", "" },
-            { "REMOVE", "" },
-            { "UPDATE", "3" }
+            { "UPDATE", "6" },
+            { "REMOVE", "" }
         };
     }
 
-    @Test(dataProvider = "cartActions", priority = 1)
+    @Test(dataProvider = "cartOperationsProvider", priority = 1)
     public void testCartOperations(String action, String qty) {
-
-    	cartPage.hoverAndClickQuickAddToCart();
-        cartPage.navigateToCartPage();
         
         if (action.equals("ADD")) {
-            Assert.assertNotNull(driver.getTitle(), "Cart page crashed after adding item");
-            
-        } else if (action.equals("REMOVE")) {
-            cartPage.removeProduct();
-            String msg = cartPage.getEmptyCartMessage().toLowerCase();
-            Assert.assertTrue(msg.contains("empty") || msg.contains("Your shopping cart is empty!"), "Empty cart message not shown");
+            boolean isProductVisible = cartPage.isProductDisplayedInCart();
+            Assert.assertTrue(isProductVisible, "Check failed: Product did not appear in cart!");
             
         } else if (action.equals("UPDATE")) {
             cartPage.updateQuantity(qty);
-            Assert.assertNotNull(driver.getTitle(), "Page broke after quantity update");
+            
+            String actualQty = cartPage.getCartQuantity();
+            Assert.assertEquals(actualQty, qty, "Check failed: Quantity did not update correctly!");
+            
+        } else if (action.equals("REMOVE")) {
+            cartPage.removeProduct();
+            
+            String msg = cartPage.getEmptyCartMessage().toLowerCase();
+            Assert.assertTrue(msg.contains("empty") || msg.contains("your shopping cart is empty!"), 
+                    "Check failed: The message 'your cart is empty' did not appear.!");
         }
     }
 
