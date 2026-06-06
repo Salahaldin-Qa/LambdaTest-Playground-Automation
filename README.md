@@ -82,7 +82,7 @@ LambdaTest_Playground_Automation/
 
 ```
 
- Automated Test Cases Specifications
+ ## Automated Test Cases Specifications
 🎯 Search Module (SearchTests)
 TC_SEARCH_001: Global Product Search
 
@@ -95,20 +95,20 @@ Objective: Validate system behavior and error messaging when initiating a blank 
 
 
 
-🛒 Shopping Cart Module (CartTests)
-##TC_CART_001: Data-Driven Quick Add to Cart (ADD)
+## 🛒 Shopping Cart Module (CartTests)
+## TC_CART_001: Data-Driven Quick Add to Cart (ADD)
 
 Objective: Validate that hovering over a product and clicking the quick action button successfully populates the cart database.
 
-##TC_CART_002: Dynamic Quantity Modification (UPDATE)
+## TC_CART_002: Dynamic Quantity Modification (UPDATE)
 
 Objective: Assert that modifying product quantity values dynamically updates the core cart layout values and sub-totals.
 
-##TC_CART_003: Product Deletion & Empty State (REMOVE)
+## TC_CART_003: Product Deletion & Empty State (REMOVE)
 
 Objective: Ensure that removing the last remaining product correctly transitions the cart layout into its baseline empty state.
 
-##TC_CART_004: Business Logic Restriction (Zero Stock)
+## TC_CART_004: Business Logic Restriction (Zero Stock)
 
 Objective: Assert that the Quick Buy Now functionality is structurally disabled or hidden for catalog elements that have a zero-stock indicator.
 
@@ -117,30 +117,33 @@ Objective: Assert that the Quick Buy Now functionality is structurally disabled 
 
 
 
-🚀 Setup & Installation
+## 🚀 Setup & Installation
+
 Clone the repository:
 
-Bash
+## Bash
    git clone [https://github.com/your-username/LambdaTest_Playground_Automation.git](https://github.com/Salahaldin-Qa/LambdaTest_Playground_Automation.git)
    cd LambdaTest_Playground_Automation
 Install all project dependencies:
 
-Bash
+## Bash
    mvn clean install -DskipTests
 🏃 Running the Tests
 Run the full execution suite (TestNG XML):
 
-Bash
+## Bash
   mvn test
 Run only the Cart Lifecycle suite:
 
-Bash
+## Bash
   mvn test -Dtest=CartTests
 Run only the Search suite validation:
 
-Bash
+## Bash
   mvn test -Dtest=SearchTests
-📬 Reports Generation
+
+  
+## 📬 Reports Generation
 After each execution flow, comprehensive TestNG reports are auto-generated under the test-output/ directory:
 
 📄 index.html — Complete interactive HTML execution pipeline report.
