@@ -127,6 +127,7 @@ Clone the repository:
    cd LambdaTest_Playground_Automation
 Install all project dependencies:
 
+
 ## Bash
    mvn clean install -DskipTests
    
@@ -134,13 +135,17 @@ Install all project dependencies:
 ## 🏃 Running the Tests
 Run the full execution suite (TestNG XML):
 
+
 ## Bash
   mvn test
-Run only the Cart Lifecycle suite:
+
+  
+## Run only the Cart Lifecycle suite:
 
 ## Bash
   mvn test -Dtest=CartTests
-Run only the Search suite validation:
+  
+## Run only the Search suite validation:
 
 ## Bash
   mvn test -Dtest=SearchTests
