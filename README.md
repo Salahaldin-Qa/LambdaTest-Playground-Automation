@@ -27,7 +27,7 @@ The framework is strictly engineered around the **Page Object Model (POM)** desi
 * **Strict Encapsulation:** Page class locators are declared `private` or `protected`, ensuring state boundaries. Elements are safely manipulated solely via public action-driven methods.
 * **DRY Principle Compliance:** Shared setups, teardowns, and driver lifecycle properties are centralized via Java OOP inheritance within `BaseTest`.
 
----
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ## 🛠️ Tech Stack & Dependencies
 
@@ -40,7 +40,7 @@ The framework is strictly engineered around the **Page Object Model (POM)** desi
 | **Test Runner** | TestNG | TestNG 7.11.0 |
 | **Design Pattern** | Page Object Model | Clean Architecture (POM) |
 
----
+---------------------------------------------------------------------------------------
 
 ## 📂 Project Structure & Directory Tree
 
@@ -81,6 +81,7 @@ LambdaTest_Playground_Automation/
 
 
 ```
+------------------------------------
 
  ## Automated Test Cases Specifications
 ## 🎯 Search Module (SearchTests)
@@ -117,7 +118,7 @@ Objective: Assert that the Quick Buy Now functionality is structurally disabled 
 
 
 
-
+----------------
 
 ## 🚀 Setup & Installation
 
