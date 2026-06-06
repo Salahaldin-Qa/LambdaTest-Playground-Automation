@@ -61,7 +61,7 @@ LambdaTest_Playground_Automation/
 ├── pom.xml                                 # Maven dependencies, encoding & compiler plugins
 └── testng.xml                              # TestNG execution suite configurations
 
-```text
+``
 LambdaTest_Playground_Automation/
 ├── docs/                                  # Project Documentation
 │   ├── Test_Plan_LambdaTest.docx          # Strategic QA Automation Test Plan document
