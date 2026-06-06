@@ -84,12 +84,13 @@ LambdaTest_Playground_Automation/
 
  ## Automated Test Cases Specifications
 🎯 Search Module (SearchTests)
-TC_SEARCH_001: Global Product Search
+
+## TC_SEARCH_001: Global Product Search
 
 Objective: Verify that searching for an active product returns accurate and relevant catalog results.
 
 
-TC_SEARCH_002: Empty Search & Validation
+## TC_SEARCH_002: Empty Search & Validation
 
 Objective: Validate system behavior and error messaging when initiating a blank or non-existent keyword search query.
 
@@ -146,6 +147,6 @@ Run only the Search suite validation:
 ## 📬 Reports Generation
 After each execution flow, comprehensive TestNG reports are auto-generated under the test-output/ directory:
 
-📄 index.html — Complete interactive HTML execution pipeline report.
+## 📄 index.html — Complete interactive HTML execution pipeline report.
 
-📧 emailable-report.html — Lightweight, shareable execution summary.
+## 📧 emailable-report.html — Lightweight, shareable execution summary.
