@@ -129,7 +129,9 @@ Install all project dependencies:
 
 ## Bash
    mvn clean install -DskipTests
-🏃 Running the Tests
+   
+   
+## 🏃 Running the Tests
 Run the full execution suite (TestNG XML):
 
 ## Bash
@@ -142,6 +144,7 @@ Run only the Search suite validation:
 
 ## Bash
   mvn test -Dtest=SearchTests
+
 
   
 ## 📬 Reports Generation
