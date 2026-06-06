@@ -94,7 +94,7 @@ Objective: Verify that searching for an active product returns accurate and rele
 
 Objective: Validate system behavior and error messaging when initiating a blank or non-existent keyword search query.
 
-
+--------------------------------------------
 
 ## 🛒 Shopping Cart Module (CartTests)
 
@@ -137,7 +137,7 @@ Clone the repository:
  ```
   mvn clean install -DskipTests
    ```
-   
+-----   
 ## 🏃 Running the Tests
 Run the full execution suite (TestNG XML):
 
