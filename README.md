@@ -45,8 +45,6 @@ LambdaTest_Playground_Automation/
 
 ```
 
-
-
 📝 Automated Test Cases Specifications
 The framework covers critical end-to-end functionality mapped directly from business requirements:
 
@@ -121,3 +119,4 @@ After each execution flow, comprehensive TestNG reports are auto-generated under
 index.html - Complete interactive HTML execution pipeline report.
 
 emailable-report.html - Lightweight, shareable execution summary.
+
