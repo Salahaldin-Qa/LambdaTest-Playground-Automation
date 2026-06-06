@@ -83,7 +83,7 @@ LambdaTest_Playground_Automation/
 ```
 
  ## Automated Test Cases Specifications
-🎯 Search Module (SearchTests)
+## 🎯 Search Module (SearchTests)
 
 ## TC_SEARCH_001: Global Product Search
 
@@ -97,6 +97,7 @@ Objective: Validate system behavior and error messaging when initiating a blank 
 
 
 ## 🛒 Shopping Cart Module (CartTests)
+
 ## TC_CART_001: Data-Driven Quick Add to Cart (ADD)
 
 Objective: Validate that hovering over a product and clicking the quick action button successfully populates the cart database.
@@ -145,10 +146,12 @@ Run the full execution suite (TestNG XML):
   
 ## Run only the Cart Lifecycle suite:
 
+
 ## Bash
   mvn test -Dtest=CartTests
   
 ## Run only the Search suite validation:
+
 
 ## Bash
   mvn test -Dtest=SearchTests
