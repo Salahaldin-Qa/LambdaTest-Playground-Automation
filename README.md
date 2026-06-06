@@ -82,20 +82,20 @@ LambdaTest_Playground_Automation/
 
 ```
 
-###📝 Automated Test Cases Specifications
-#🎯 Search Module (SearchTests)
-##TC_SEARCH_001: Global Product Search
+ Automated Test Cases Specifications
+🎯 Search Module (SearchTests)
+TC_SEARCH_001: Global Product Search
 
-##Objective: Verify that searching for an active product returns accurate and relevant catalog results.
+Objective: Verify that searching for an active product returns accurate and relevant catalog results.
 
 
-##TC_SEARCH_002: Empty Search & Validation
+TC_SEARCH_002: Empty Search & Validation
 
 Objective: Validate system behavior and error messaging when initiating a blank or non-existent keyword search query.
 
 
 
-##🛒 Shopping Cart Module (CartTests)
+🛒 Shopping Cart Module (CartTests)
 ##TC_CART_001: Data-Driven Quick Add to Cart (ADD)
 
 Objective: Validate that hovering over a product and clicking the quick action button successfully populates the cart database.
@@ -112,11 +112,16 @@ Objective: Ensure that removing the last remaining product correctly transitions
 
 Objective: Assert that the Quick Buy Now functionality is structurally disabled or hidden for catalog elements that have a zero-stock indicator.
 
-##🚀 Setup & Installation
+
+
+
+
+
+🚀 Setup & Installation
 Clone the repository:
 
 Bash
-   git clone [https://github.com/your-username/LambdaTest_Playground_Automation.git](https://github.com/your-username/LambdaTest_Playground_Automation.git)
+   git clone [https://github.com/your-username/LambdaTest_Playground_Automation.git](https://github.com/Salahaldin-Qa/LambdaTest_Playground_Automation.git)
    cd LambdaTest_Playground_Automation
 Install all project dependencies:
 
@@ -135,9 +140,9 @@ Run only the Search suite validation:
 
 Bash
   mvn test -Dtest=SearchTests
-##📬 Reports Generation
+📬 Reports Generation
 After each execution flow, comprehensive TestNG reports are auto-generated under the test-output/ directory:
 
-##📄 index.html — Complete interactive HTML execution pipeline report.
+📄 index.html — Complete interactive HTML execution pipeline report.
 
-##📧 emailable-report.html — Lightweight, shareable execution summary.
+📧 emailable-report.html — Lightweight, shareable execution summary.
