@@ -27,7 +27,9 @@ The framework is strictly engineered around the **Page Object Model (POM)** desi
 ```text
 LambdaTest_Playground_Automation/
 ├── docs/                                  # Project Documentation
-│   └── Test_Cases_LambdaTest.xlsx         # Detailed Test Cases execution sheet
+│   ├── Test_Plan_LambdaTest.docx          # Strategic QA Automation Test Plan document
+│   ├── Test_Cases_LambdaTest.xlsx         # Detailed Test Cases execution sheet
+│   └── Automation_Project_Presentation.pdf # Project showcase & architecture presentation slide deck
 ├── src/
 │   ├── main/java/pages/                   # Page Objects (UI Locators & Actions)
 │   │   ├── CartPage.java                  # Cart operations, quantities, and stock controls
@@ -38,6 +40,10 @@ LambdaTest_Playground_Automation/
 │       └── SearchTests.java               # Product search verification scenarios
 ├── pom.xml                                # Maven dependencies, encoding & compiler plugins
 └── testng.xml                             # TestNG execution suite configurations
+
+
+
+
 
 
 📝 Automated Test Cases Specifications
@@ -114,15 +120,3 @@ After each execution flow, comprehensive TestNG reports are auto-generated under
 index.html - Complete interactive HTML execution pipeline report.
 
 emailable-report.html - Lightweight, shareable execution summary.
-
-
-
-
-
-
-
-
-
-
-
-
