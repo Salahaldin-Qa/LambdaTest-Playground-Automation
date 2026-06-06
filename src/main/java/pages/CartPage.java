@@ -23,7 +23,9 @@ public class CartPage {
     private By quantityInput = By.xpath("//td[contains(@class,'text-left')]//input[contains(@name, 'quantity')] | //div[@class='input-group']//input");
     private By updateCartBtn = By.xpath("//button[@type='submit' and contains(@data-original-title, 'Update') or contains(@title, 'Update')]");
     private By removeProductBtn = By.xpath("//button[contains(@class, 'btn-danger')]");
-    private By emptyCartMsg = By.xpath("//div[@id='content']//p[contains(text(), 'empty') or contains(text(), 'empty') or contains(text(), '00')]");
+    private By emptyCartMsg = By.xpath("//div[@id='content']//p[contains(text(), 'empty') or contains(text(), '00')]");
+    
+    private By cartTableRows = By.xpath("//div[@class='table-responsive']//table//tbody//tr");
 
     public CartPage(WebDriver driver) {
         this.driver = driver;
@@ -45,7 +47,11 @@ public class CartPage {
             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", cartBtn);
         }
         
-        try { Thread.sleep(1500); } catch (InterruptedException e) { e.printStackTrace(); }
+        try {
+            wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector(".alert-success")));
+        } catch (Exception e) {
+            try { Thread.sleep(1500); } catch (InterruptedException ie) { ie.printStackTrace(); }
+        }
     }
 
     public boolean isQuickBuyNowAvailable() {
@@ -73,7 +79,7 @@ public class CartPage {
             WebElement btn = driver.findElement(updateCartBtn);
             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", btn);
         }
-        try { Thread.sleep(1000); } catch (Exception e) {}
+        try { Thread.sleep(1500); } catch (Exception e) {}
     }
 
     public void removeProduct() {
@@ -84,7 +90,7 @@ public class CartPage {
             WebElement removeBtn = driver.findElement(removeProductBtn);
             ((JavascriptExecutor) driver).executeScript("arguments[0].click();", removeBtn);
         }
-        try { Thread.sleep(1000); } catch (Exception e) {}
+        try { Thread.sleep(1500); } catch (Exception e) {}
     }
 
     public String getEmptyCartMessage() {
@@ -92,6 +98,23 @@ public class CartPage {
             return wait.until(ExpectedConditions.visibilityOfElementLocated(emptyCartMsg)).getText();
         } catch (Exception e) {
             return driver.getPageSource();
+        }
+    }
+
+    public boolean isProductDisplayedInCart() {
+        try {
+            return wait.until(ExpectedConditions.visibilityOfElementLocated(cartTableRows)).isDisplayed();
+        } catch (Exception e) {
+            return false;
+        }
+    }
+
+    public String getCartQuantity() {
+        try {
+            WebElement qtyInput = wait.until(ExpectedConditions.visibilityOfElementLocated(quantityInput));
+            return qtyInput.getAttribute("value");
+        } catch (Exception e) {
+            return null;
         }
     }
 }
